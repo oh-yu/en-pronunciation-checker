@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>発音チエック</title>
+</head>
+<body>
+    <input type="button" id='startButton' value="start"></button>
+    <div id='result' style="text-align: center;"></div>
+    <script>
+    const pronounce = new webkitSpeechRecognition();
+    pronounce.lang = 'en-US';
+    pronounce.interimReuslts = true;
+
+    const startButton = document.getElementById('startButton');
+    const result = document.getElementById('result');
+
+    startButton.addEventListener('click',function(){
+    const switchIdentifier = this.value; //this = startButton
+    if (switchIdentifier === "start") {
+      this.value = "stop";
+      pronounce.start();
+      pronounce.onresult = function (event) {
+        var text = event.results[0][0].transcript
+        result.innerHTML += '<div>' + text + '</div>';
+    }
+    }
+    else if (switchIdentifier === "stop") {
+      this.value = "start";
+    }
+    });
+
+    </script>
+</body>
