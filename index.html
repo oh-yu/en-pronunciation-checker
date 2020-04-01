@@ -39,12 +39,13 @@ input:hover {
       this.value = "stop";
       pronounce.start();
       pronounce.onresult = function (event) {
-        var text = event.results[0][0].transcript
-        result.innerHTML += '<div>' + text + '</div>';
+        result.innerHTML += '<div>' + event.results[0][0].transcript + '</div>';
     }
     }
     else if (switchIdentifier === "stop") {
       this.value = "start";
+      pronounce.stop();
+      result.innerHTML =　"";
     }
     });
 
