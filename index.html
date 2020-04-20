@@ -1,53 +1,63 @@
-<!DOCTYPE html>
 <head>
-    <title>発音チエック</title>
-    <style>
-  input {
-  display: block;
-  background-color: #a9cdff;
-  color: #FFF;
-  width: 150px; 
-  height: 150px; 
-  line-height: 150px;
-  border: 1px solid #ccc; 
-  border-radius: 50%;
-  text-align: center;
-  overflow: hidden;
-  transition: .5s;
-  font-size: 35px;
-  margin: 0 auto; 
+  <title>発音チエック</title>
+  <style>
+input {
+display: block;
+background-color: #a9cdff;
+color: #FFF;
+width: 150px;
+height: 150px;
+line-height: 150px;
+border: 1px solid #ccc;
+border-radius: 50%;
+text-align: center;
+overflow: hidden;
+transition: .5s;
+font-size: 35px;
+margin: 0 auto;
 }
 input:hover {
-  background-color: #5373b6;
+background-color: #5373b6;
 }
-    </style>
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-    <input type="button" id='startButton' value="start"></button>
+  <div id='app'>
+    <input v-on:click="deleteButton" type="button" value="Delete"></input>
     <div id='result' style="text-align: center;"></div>
-    <script>
-    const pronounce = new webkitSpeechRecognition();
-    pronounce.lang = 'en-US';
-    pronounce.interimReuslts = true;
-
-    const startButton = document.getElementById('startButton');
-    const result = document.getElementById('result');
-
-    startButton.addEventListener('click',function(){
-    const switchIdentifier = this.value; //this = startButton
-    if (switchIdentifier === "start") {
-      this.value = "stop";
-      pronounce.start();
-      pronounce.onresult = function (event) {
-        result.innerHTML += '<div>' + event.results[0][0].transcript + '</div>';
+  </div>
+  <script>
+  const pronounce = new webkitSpeechRecognition();
+  pronounce.lang = 'en-US';
+  pronounce.interimReuslts = true;
+  pronounce.start()
+  pronounce.onresult = function (event) {
+//onresult => 結果イベント発火で呼び出しされるイベントハンドル
+    pronounce.stop();
+//.stop（） => 認識終了する関数
+    if(event.results[0].isFinal){
+//isFinal => rerultsに結果が格納し終わるとtrue
+      result.innerHTML += '<h2>' + event.results[0][0].transcript + '</h2>';
     }
-    }
-    else if (switchIdentifier === "stop") {
-      this.value = "start";
-      pronounce.stop();
-      result.innerHTML =　"";
-    }
-    });
+  }
+  pronounce.onend = ()=>{
+//onend => 終了イベント発火で、呼び出しされるイベントハンドル
+    pronounce.start()
+  };
 
-    </script>
+const app = new Vue({
+  el: '#app',
+  data:{
+    message: 'hoge'
+  },
+  methods:{
+    deleteButton: function(event){
+      const result = document.getElementById('result');
+      result.innerHTML = "";
+    }
+  },
+
+})
+  </script>
 </body>
