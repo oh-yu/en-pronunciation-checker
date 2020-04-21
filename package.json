@@ -1,12 +1,11 @@
 {
-  "name": "my-app",
+  "name": "en-pronouciation-cheker",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-serice lint",
-    "postinstall": "yarn build",
+    "lint": "vue-cli-service lint",
     "start": "node server.js"
   },
   "dependencies": {
