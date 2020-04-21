@@ -12,7 +12,7 @@
     </v-app-bar>
     <v-content>
     <br>
-    {{msg}}
+    <strong style="white-space:pre-wrap; word-wrap:break-word;" >{{msg}}</strong>
     </v-content>
   </v-app>
 </template>
