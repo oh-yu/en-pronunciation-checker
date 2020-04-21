@@ -20,11 +20,10 @@ input:hover {
 background-color: #5373b6;
 }
   </style>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
   <div id='app'>
-    <input v-on:click="deleteButton" type="button" value="Delete"></input>
+    <input id="button" v-on:click="deleteButton" type="button" value="Delete"></input>
     <div id='result' style="text-align: center;"></div>
   </div>
   <script>
@@ -45,19 +44,10 @@ background-color: #5373b6;
 //onend => 終了イベント発火で、呼び出しされるイベントハンドル
     pronounce.start()
   };
-
-const app = new Vue({
-  el: '#app',
-  data:{
-    message: 'hoge'
-  },
-  methods:{
-    deleteButton: function(event){
-      const result = document.getElementById('result');
-      result.innerHTML = "";
-    }
-  },
-
-})
+    const button = document.getElementById('button');
+    const result = document.getElementById('result');
+    button.addEventListener('click',()=>{
+            result.innerHTML = "";
+    })
   </script>
 </body>
