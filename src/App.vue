@@ -38,7 +38,7 @@ export default {
 //onresult => 結果イベント発火で呼び出しされるイベントハンドル
     this.pronounce.stop();
 //.stop（） => 認識終了する関数
-    if(event.results[0].isFinal){
+    if(this.event.results[0].isFinal){
 //isFinal => rerultsに結果が格納し終わるとtrue
       this.msg += this.event.results[0][0].transcript;
     }
