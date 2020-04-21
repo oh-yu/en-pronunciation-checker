@@ -13,6 +13,7 @@
     <v-content>
     <br>
     <strong style="white-space:pre-wrap; word-wrap:break-word;" >{{msg}}</strong>
+    <div id="result" style="text-align: center;"></div>
     </v-content>
   </v-app>
 </template>
@@ -23,7 +24,8 @@ export default {
   data: function(){
   return{
   msg: 'Circle button(color="orange") can delete logs.',
-  pronounce: new window.webkitSpeechRecognition()
+  pronounce: new window.webkitSpeechRecognition(),
+  result: document.getElementById('result')
   }
   },
   methods:{
@@ -40,7 +42,7 @@ export default {
 //.stop（） => 認識終了する関数
     if(event.results[0].isFinal){
 //isFinal => rerultsに結果が格納し終わるとtrue
-      this.msg += event.results[0][0].transcript;
+      this.result.innerHTML += '<h2>' + event.results[0][0].transcript + '</h2>';
     }
   }
   this.pronounce.onend = ()=>{
