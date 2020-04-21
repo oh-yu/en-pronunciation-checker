@@ -1,15 +1,10 @@
-var http = require('http');
-var fs = require('fs');
+const express = require('express');
+const app = express();
 
-var appServer = http.createServer()
-appServer.on('request', executeRequest);
+app.get("/",function(request,response){
+  response.sendFile(__dirname+"/index.html");
 
-function executeRequest(req,res){
-    fs.readFile('./index.html','utf-8',callBack(err,data)=>{
-    res.writeHead(200,{'Content-Type': 'text/html'});
-    res.write(data);
-    res.end()
-  });
-}
-
-appServer.listen(process.env.PORT || 8080);
+});
+app.listen(process.env.PORT || 3000, function(){
+  console.log("This is runnning on port 3000 correctly.");
+});
