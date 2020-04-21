@@ -58,4 +58,7 @@
     "url": "https://github.com/hisasu00/en-pronounciation-checker/issues"
   },
   "homepage": "https://github.com/hisasu00/en-pronounciation-checker#readme"
-}
+},
+"engines": {
+"node": "8.10.0",
+"npm": "3.5.2"}
