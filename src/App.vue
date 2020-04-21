@@ -12,8 +12,8 @@
     </v-app-bar>
     <v-content>
     <br>
-    <div style="text-align: center;" >{{msg}}</strong>
-    <div id="result" style="text-align: center;"></div>
+    {{msg}}
+    <div id="result"></div>
     </v-content>
   </v-app>
 </template>
