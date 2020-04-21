@@ -30,7 +30,8 @@ export default {
   },
   methods:{
   deleteText(){
-  this.msg=''
+  this.msg = ''
+  this.result.innerHTML = ''
   }},
   created: function(){
   this.pronounce.lang = 'en-US';
