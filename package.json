@@ -5,7 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-serice lint",
+    "postinstall": "yarn build",
+    "start": "node server.js"
   },
   "dependencies": {
     "core-js": "^3.6.4",
@@ -44,11 +46,16 @@
     "last 2 versions",
     "not dead"
   ],
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-serice lint",
-    "postinstall": "yarn build",
-    "start": "node server.js"
-  }
+  "description": "## Project setup ``` npm install ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hisasu00/en-pronounciation-checker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hisasu00/en-pronounciation-checker/issues"
+  },
+  "homepage": "https://github.com/hisasu00/en-pronounciation-checker#readme"
 }
