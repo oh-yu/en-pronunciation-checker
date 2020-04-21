@@ -12,7 +12,7 @@
     </v-app-bar>
     <v-content>
     <br>
-    <strong style="white-space:pre-wrap; word-wrap:break-word;" >{{msg}}</strong>
+    <div style="text-align: center;" >{{msg}}</strong>
     <div id="result" style="text-align: center;"></div>
     </v-content>
   </v-app>
