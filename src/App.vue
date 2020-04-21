@@ -24,14 +24,13 @@ export default {
   data: function(){
   return{
   msg: 'Circle button(color="orange") can delete logs.',
-  pronounce: new window.webkitSpeechRecognition(),
-  result: document.getElementById('result')
+  pronounce: new window.webkitSpeechRecognition()
   }
   },
   methods:{
   deleteText(){
   this.msg = ''
-  this.result.innerHTML = ''
+  document.getElementById('result').innerHTML = ''
   }},
   created: function(){
   this.pronounce.lang = 'en-US';
@@ -43,7 +42,7 @@ export default {
 //.stop（） => 認識終了する関数
     if(event.results[0].isFinal){
 //isFinal => rerultsに結果が格納し終わるとtrue
-      this.result.innerHTML += '<h2>' + event.results[0][0].transcript + '</h2>';
+      document.getElementById('result').innerHTML += '<h2>' + event.results[0][0].transcript + '</h2>';
     }
   }
   this.pronounce.onend = ()=>{
