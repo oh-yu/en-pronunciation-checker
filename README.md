@@ -1,4 +1,4 @@
-# my-app
+# en-pronounciation-checker
 
 ## Project setup
 ```
