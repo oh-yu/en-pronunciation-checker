@@ -23,6 +23,7 @@
     <v-content>
     <br>
     {{msg}}
+    <div id="result"></div>
     </v-content>
   </v-app>
 </template>
@@ -40,6 +41,7 @@ export default {
   methods:{
   deleteText(){
   this.msg=''
+  document.getElementById('result').innerHTML=''
   }},
   created: function(){
   this.pronounce.lang = 'en-US';
@@ -51,7 +53,7 @@ export default {
 //.stop（） => 認識終了する関数
     if(event.results[0].isFinal){
 //isFinal => rerultsに結果が格納し終わるとtrue
-      this.msg += this.event.results[0][0].transcript;
+      document.getElementById('result').innerHTML += '<h2>' + event.results[0][0].transcript + '</h2>';
     }
   }
   this.pronounce.onend = ()=>{
