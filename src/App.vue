@@ -9,19 +9,26 @@
       </v-app-bar>
       <v-navigation-drawer v-model="drawer" absolute temporary>
         <v-list>
-          <v-list-item>
-            <router-link to='/'>Home</router-link>
-          </v-list-item>
-          <v-list-item>
-            <router-link to='/Info'>Info</router-link>
-          </v-list-item>
+          <v-list-item-group color="primary">
+            <v-list-item rounded @click="$router.push({ name: 'Home' })">
+              <v-list-item-icon>
+                <v-icon>mdi-home</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>Home</v-list-item-title>
+            </v-list-item>
+            <v-list-item rounded @click="$router.push({ name: 'Info' })">
+                <v-list-item-icon>
+                  <v-icon>mdi-information</v-icon>
+                </v-list-item-icon>
+              <v-list-item-title>Info</v-list-item-title>
+            </v-list-item>
+          </v-list-item-group>
         </v-list>
       </v-navigation-drawer>
       <router-view/>
     </v-app>
   </div>
 </template>
-
 <script>
 export default {
   name: 'App',
