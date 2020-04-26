@@ -1,10 +1,13 @@
 <template>
   <div>
-    <v-content>
-    <br>
-    {{msg}}
-    <div id="result"></div>
-    </v-content>
+    <v-card class="mx-3">
+      <v-content>
+      <v-btn icon x-large color="orange" @click="deleteText()"><v-icon> mdi-eraser </v-icon></v-btn>
+      {{msg}}
+      <br/>
+      <div id="result"></div>
+      </v-content>
+    </v-card>
   </div>
 </template>
 <script>
@@ -12,7 +15,7 @@ export default {
   name: 'Home',
   data: function(){
   return{
-  msg: 'Circle button(color="orange") can delete logs.',
+  msg: 'This button can delete logs.',
   pronounce: new window.webkitSpeechRecognition(),
   drawer: false
   }
