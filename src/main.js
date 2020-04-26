@@ -8,3 +8,5 @@ new Vue({
   vuetify,
   render: h => h(App)
 }).$mount('#app')
+//Vue instance is newed here
+//Also,this instance is mounted to #app
