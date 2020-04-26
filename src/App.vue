@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <v-app>
-      <v-app-bar app color="primary" dark>
+      <v-app-bar app color="primary" dark >
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         <v-toolbar-title>Pronounciation Checker</v-toolbar-title>
       </v-app-bar>
@@ -14,7 +14,7 @@
               </v-list-item-icon>
               <v-list-item-title>Home</v-list-item-title>
             </v-list-item>
-            <v-list-item rounded @click="$router.push({ name: 'Info' })">
+            <v-list-item rounded @click="hoge()">
                 <v-list-item-icon>
                   <v-icon>mdi-information</v-icon>
                 </v-list-item-icon>
@@ -31,6 +31,10 @@
 export default {
   name: 'App',
   data: function(){
-  return{drawer: false}
-}}
+  return{drawer: false}},
+  methods: {
+    hoge: function(){
+      alert('I am very sorry, this is Under a construction.')
+  }}
+}
 </script>

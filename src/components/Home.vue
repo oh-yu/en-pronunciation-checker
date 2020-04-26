@@ -1,13 +1,21 @@
 <template>
   <div>
-    <v-card class="mx-3">
-      <v-content>
-      <v-btn icon x-large color="orange" @click="deleteText()"><v-icon> mdi-eraser </v-icon></v-btn>
-      {{msg}}
-      <br/>
-      <div id="result"></div>
+    <v-card class="mx-auto" elevation="7" height="90vh" width="90%">
+      <v-content class="pb-10">
+        <v-card-title>
+          Give Permission For Your Microphone.
+          <v-icon>mdi-microphone</v-icon>
+        </v-card-title>
+        <v-divider/>
+        <div id="result"></div>
       </v-content>
     </v-card>
+    <v-bottom-navigation  color="blue lighten-2">
+      <v-btn x-large @click="deleteText()">
+        <span>Delete</span>
+        <v-icon>mdi-eraser</v-icon>
+      </v-btn>
+    </v-bottom-navigation>
   </div>
 </template>
 <script>
@@ -17,7 +25,7 @@ export default {
   return{
   msg: 'This button can delete logs.',
   pronounce: new window.webkitSpeechRecognition(),
-  drawer: false
+  drawer: false,
   }
   },
   methods:{
@@ -35,7 +43,7 @@ export default {
 //.stop（） => 認識終了する関数
     if(event.results[0].isFinal){
 //isFinal => rerultsに結果が格納し終わるとtrue
-      document.getElementById('result').innerHTML += '<h2>' + event.results[0][0].transcript + '</h2>';
+      document.getElementById('result').innerHTML += '<h2>' + event.results[0][0].transcript + '</h2>'+'<v-divider/>';
     }
   }
   this.pronounce.onend = ()=>{
