@@ -3,7 +3,7 @@
     <v-card class="mx-auto" elevation="7" height="90vh" width="90%">
       <v-content>
         <v-card-title>
-          Authorize Yout Microphone.
+          Authorize Your Microphone.
           <v-icon>mdi-microphone</v-icon>
         </v-card-title>
         <v-divider/>
