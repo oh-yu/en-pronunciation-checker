@@ -1,4 +1,4 @@
-# en-pronounciation-checker
+# en-pronunciation-checker
 
 ## Project setup
 ```
