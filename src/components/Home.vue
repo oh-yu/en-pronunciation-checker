@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-card class="mx-auto" elevation="7" height="90vh" width="90%">
-      <v-content>
+      <v-content class="pa-5">
         <v-card-title>
           Authorize Your Microphone.
           <v-icon>mdi-microphone</v-icon>
