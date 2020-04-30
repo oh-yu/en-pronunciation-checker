@@ -4,18 +4,17 @@
       <v-content class="pb-7">
         <v-card-title>
           Authorize Your Microphone.
-          <v-icon>mdi-microphone</v-icon>
+          <v-btn icon @click="authorizeMedia()">
+            <v-icon>mdi-microphone</v-icon>
+          </v-btn>
         </v-card-title>
         <v-divider/>
         <div id="result"></div>
       </v-content>
-    </v-card>
-    <v-bottom-navigation  color="blue lighten-2">
-      <v-btn x-large @click="deleteText()">
-        <span>Delete</span>
+      <v-btn color="error" dark x-large fab bottom right absolute @click="deleteText()">
         <v-icon>mdi-eraser</v-icon>
       </v-btn>
-    </v-bottom-navigation>
+    </v-card>
   </div>
 </template>
 <script>
@@ -32,7 +31,9 @@ export default {
   deleteText(){
   this.msg=''
   document.getElementById('result').innerHTML=''
-  }},
+  },
+  authorizeMedia(){alert('If you have any troubles, please check your input of micryophone.')}
+},
   created: function(){
   this.pronounce.lang = 'en-US';
   this.pronounce.interimReuslts = true;

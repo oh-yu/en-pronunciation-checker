@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <v-app>
-      <v-app-bar app color="primary" dark >
+      <v-app-bar app color="light-blue">
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-        <v-toolbar-title>Pronunciation Checker</v-toolbar-title>
+        <v-toolbar-title class="white--text">Pronunciation Checker</v-toolbar-title>
       </v-app-bar>
       <v-navigation-drawer v-model="drawer" absolute temporary>
         <v-list>
