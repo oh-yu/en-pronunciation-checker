@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-card class="mx-auto" elevation="7" height="90vh" width="90%">
-      <v-content class="pb-7">
+    <v-card id="cardStyle" class="mx-auto"  elevation="7" height="90vh" width="90%" style="overflow: auto;">
+      <v-content>
         <v-card-title>
           Authorize Your Microphone.
           <v-btn icon @click="authorizeMedia()">
@@ -9,9 +9,9 @@
           </v-btn>
         </v-card-title>
         <v-divider/>
-        <div id="result"></div>
+        <div id="result" style="text-align: center;"></div>
       </v-content>
-      <v-btn color="error" dark x-large fab bottom right absolute @click="deleteText()">
+      <v-btn color="error" dark x-large fab @click="deleteText()" class="v-btn--style" >
         <v-icon>mdi-eraser</v-icon>
       </v-btn>
     </v-card>
@@ -44,7 +44,7 @@ export default {
 //.stop（） => 認識終了する関数
     if(event.results[0].isFinal){
 //isFinal => rerultsに結果が格納し終わるとtrue
-      document.getElementById('result').innerHTML += '<h2>' + event.results[0][0].transcript + '</h2>'+'<v-divider/>';
+      document.getElementById('result').innerHTML += '<h2>' + event.results[0][0].transcript + '</h2>';
     }
   }
   this.pronounce.onend = ()=>{
@@ -56,4 +56,10 @@ export default {
 }
 </script>
 <style>
+#cardStyle .v-btn--style{
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  margin: 0 5px 16px 16px;
+}
 </style>
