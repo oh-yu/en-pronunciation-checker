@@ -58,7 +58,7 @@ export default {
 <style>
 #cardStyle .v-btn--style{
   bottom: 0;
-  right: 0;
+  right: 16px;
   position: absolute;
   margin: 0 5px 16px 16px;
 }
