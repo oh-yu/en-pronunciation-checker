@@ -4,7 +4,7 @@
 ## Project setup
 ```
 npm install
-(You need to install some python libralies, I'm sorry for not specifying)
+(Also you need to install some python libralies, I'm sorry for not specifying)
 ```
 
 ### Compiles and hot-reloads for development
