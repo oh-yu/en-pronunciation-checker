@@ -1,4 +1,5 @@
 # en-pronunciation-checker
+![Test Image 1](/sample.png)
 
 ## Project setup
 ```
