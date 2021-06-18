@@ -4,12 +4,7 @@
 ## Project setup
 ```
 npm install
-(Also you need to install some python libralies, I'm sorry for not specifying)
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+(Also you need to install some python libralies, I'm sorry for not specifying. Please refer to .py.)
 ```
 
 ### Compiles and minifies for production
