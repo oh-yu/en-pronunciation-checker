@@ -12,9 +12,10 @@ npm install
 npm run build
 ```
 
-### Lints and fixes files
+### execute script.start in package.json
 ```
-npm run lint
+npm start
+(You can use app on http://localhost:8080/.)
 ```
 
 ### Customize configuration
