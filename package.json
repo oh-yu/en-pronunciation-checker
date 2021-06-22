@@ -13,11 +13,15 @@
     "body-parser": "^1.19.0",
     "core-js": "^3.6.4",
     "d3": "^7.0.0",
+    "deepl": "^1.0.10",
     "express": "^4.17.1",
+    "glottologist": "^2.0.3",
     "python-shell": "^3.0.0",
+    "translate-api": "^0.3.18",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6",
-    "vuetify": "^2.2.11"
+    "vuetify": "^2.2.11",
+    "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",

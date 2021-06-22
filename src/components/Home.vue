@@ -35,7 +35,7 @@ export default {
   authorizeMedia(){alert('If you have any troubles, please check your input of micryophone.')},
   getdata(){
     //console.log("①./:   「I sent a request to ./api with params」")
-    this.$axios.get('/api',{params:{dat:this.msg}})
+    this.$axios.get('/api2',{params:{dat:this.msg}})
     .then(function(response){
       //console.log(response.data.msg) 
       this.returnMsg= response.data.msg
