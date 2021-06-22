@@ -4,7 +4,6 @@
 ## Project setup
 ```
 npm install
-(Also you need to install some python libralies, I'm sorry for not specifying. Please refer to .py.)
 ```
 
 ### Compiles and minifies for production
