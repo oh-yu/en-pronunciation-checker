@@ -4,7 +4,7 @@
       <v-content>
         <v-card-title>
           Authorize Your Microphone.
-          <v-btn icon @click="getdata()">
+          <v-btn icon @click="authorizeMedia()">
             <v-icon>mdi-microphone</v-icon>
           </v-btn>
         </v-card-title>
