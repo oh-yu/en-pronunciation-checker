@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.static(__dirname + "/dist/"));
 
-
+/*
 app.get('/api', function(req, res) {
     var {PythonShell} = require('python-shell');
     var pyshell = new PythonShell('sample.py');  
@@ -22,6 +22,7 @@ app.get('/api', function(req, res) {
         //console.log("⑥./api: 「I return response to ./」")
       })
   })
+*/
 
   app.get("/api2",function(req,res){
     var utterance=""
