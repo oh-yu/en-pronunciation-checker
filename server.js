@@ -1,5 +1,9 @@
 const express = require('express');
 const translate = require("deepl");
+require('dotenv').config();
+
+const deeplKey = String(process.env.DEEPL_KEY);
+const chaplusKey = String(process.env.CHAPLUS_KEY);
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 let xhr = new XMLHttpRequest();
 
@@ -31,7 +35,7 @@ app.get('/api', function(req, res) {
         text: req.query.dat,
         source_lan: "EN",
         target_lang: 'JA',
-        auth_key: 'fc6f1df2-a08a-a8bc-7376-a0dc26997182:fx',
+        auth_key: deeplKey,
         free_api: true
       })
       .then(result => {
@@ -39,7 +43,7 @@ app.get('/api', function(req, res) {
         //console.log(result.data.translations[0].text)
         var data = {"utterance":result.data.translations[0].text}
 
-        xhr.open('post', 'https://www.chaplus.jp/v1/chat?apikey=60c8ce54d33c9');
+        xhr.open('post', chaplusKey);
         xhr.setRequestHeader('Content-Type', 'text/json');
         xhr.send(JSON.stringify(data));
         xhr.onreadystatechange = function() {
@@ -50,7 +54,7 @@ app.get('/api', function(req, res) {
               text: aiResponse.bestResponse.utterance,
               source_lan: "JP",
               target_lang: 'EN',
-              auth_key: 'fc6f1df2-a08a-a8bc-7376-a0dc26997182:fx',
+              auth_key: deeplKey ,
               free_api: true
             })
             .then(result => {
