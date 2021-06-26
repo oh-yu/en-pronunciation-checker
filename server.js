@@ -43,7 +43,7 @@ app.get('/api', function(req, res) {
         //console.log(result.data.translations[0].text)
         var data = {"utterance":result.data.translations[0].text}
 
-        xhr.open('post', chaplusKey);
+        xhr.open('post', 'https://www.chaplus.jp/v1/chat?apikey='+chaplusKey);
         xhr.setRequestHeader('Content-Type', 'text/json');
         xhr.send(JSON.stringify(data));
         xhr.onreadystatechange = function() {
