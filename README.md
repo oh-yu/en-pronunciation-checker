@@ -3,7 +3,7 @@
 
 ## Set APIKEY
 ```
-(If you use app on local server, set APIKEY to /.env.)
+(If you use app on a local server, set your APIKEY to /.env.)
 ```
 
 ## Project setup
@@ -19,7 +19,7 @@ npm run build
 ### execute script.start in package.json
 ```
 npm start
-(You can use app on http://localhost:8080/.)
+(You can use this app on http://localhost:8080/.)
 ```
 
 ### Customize configuration
