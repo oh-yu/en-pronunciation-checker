@@ -3,7 +3,7 @@
 
 ## Set APIKEY
 ```
-(If you use app on a local server, set your APIKEY to /.env.)
+(Set your APIKEY to /.env ,If you use app on a local server.)
 ```
 
 ## Project setup
