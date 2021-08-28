@@ -1,14 +1,14 @@
 # en-pronunciation-checker
 ![Test Image 1](/sample.png)
 
+## Set APIKEY
+```
+(Set your APIKEY to /.env ,If you use app on a local server.)
+```
+
 ## Project setup
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
 ```
 
 ### Compiles and minifies for production
@@ -16,9 +16,10 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
+### execute script.start in package.json
 ```
-npm run lint
+npm start
+(You can use this app on http://localhost:8080/.)
 ```
 
 ### Customize configuration
