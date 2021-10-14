@@ -26,7 +26,6 @@ export default {
   returnMsg: '',
   pronounce: new window.webkitSpeechRecognition(),
   drawer: false,
-  uttearnce: new SpeechSynthesisUtterance()
   }
   },
   methods:{
@@ -43,9 +42,6 @@ export default {
       //console.log("⑦./:   「I receive a response from ./api, this one is below.」")
       //console.log(this.returnMsg)
       document.getElementById('result').innerHTML += '<h4>'+'<font color=lightgray>'+'Oponent:     '+"「"+this.returnMsg+"」"+'</font>'+'</h3>'
-      this.uttearnce.text = this.returnMsg;
-      this.uttearnce.lang = 'en-US'
-      window.speechSynthesis.speak(this.uttearnce);
       }.bind(this))
   }
 },
