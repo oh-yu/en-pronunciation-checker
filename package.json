@@ -19,7 +19,7 @@
     "glob-parent": "^6.0.1",
     "glottologist": "^2.0.3",
     "highlight.js": "^11.2.0",
-    "is-svg": "^4.3.1",
+    "is-svg": "^4.4.0",
     "python-shell": "^3.0.0",
     "translate-api": "^0.3.18",
     "vue": "^2.6.11",
